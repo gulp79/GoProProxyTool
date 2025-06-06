@@ -68,7 +68,7 @@ class AppWindow(ctk.CTkToplevel):
         self.file_textbox = ctk.CTkTextbox(self.dnd_frame, state="disabled", font=ctk.CTkFont(size=12))
         self.file_textbox.grid(row=1, column=0, sticky="nsew")
         
-        self.dnd_label = ctk.CTkLabel(self.dnd_frame, text="Trascina qui i file .LRV o usa il pulsante 'Sfoglia'", 
+        self.dnd_label = ctk.CTkLabel(self.dnd_frame, text="Drag and drop your .LRV files here or use the ‘Browse’ button", 
                                       font=ctk.CTkFont(size=16, slant="italic"), text_color="gray50")
         self.dnd_label.place(relx=0.5, rely=0.5, anchor="center")
 
@@ -77,17 +77,17 @@ class AppWindow(ctk.CTkToplevel):
         self.button_frame.grid(row=2, column=0, padx=20, pady=(10, 20), sticky="ew")
         self.button_frame.grid_columnconfigure((0, 1, 2), weight=1)
 
-        self.browse_button = ctk.CTkButton(self.button_frame, text="Sfoglia File .LRV", command=self.browse_files)
+        self.browse_button = ctk.CTkButton(self.button_frame, text="Browse .LRV Files", command=self.browse_files)
         self.browse_button.grid(row=0, column=0, padx=10, pady=10, sticky="ew")
 
-        self.clear_button = ctk.CTkButton(self.button_frame, text="Pulisci Lista", command=self.clear_list, fg_color="#D32F2F", hover_color="#B71C1C")
+        self.clear_button = ctk.CTkButton(self.button_frame, text="Clear List", command=self.clear_list, fg_color="#D32F2F", hover_color="#B71C1C")
         self.clear_button.grid(row=0, column=1, padx=10, pady=10, sticky="ew")
 
-        self.process_button = ctk.CTkButton(self.button_frame, text="Processa File", command=self.process_files, state="disabled")
+        self.process_button = ctk.CTkButton(self.button_frame, text="Process Files", command=self.process_files, state="disabled")
         self.process_button.grid(row=0, column=2, padx=10, pady=10, sticky="ew")
 
         # 4. Barra di stato
-        self.status_label = ctk.CTkLabel(self, text="Pronto.", anchor="w")
+        self.status_label = ctk.CTkLabel(self, text="Ready.", anchor="w")
         self.status_label.grid(row=3, column=0, padx=20, pady=(0, 10), sticky="ew")
 
     # --- FUNZIONI LOGICHE ---
@@ -104,7 +104,7 @@ class AppWindow(ctk.CTkToplevel):
         else:
             self.dnd_label.place(relx=0.5, rely=0.5, anchor="center") # Mostra di nuovo il testo
             self.process_button.configure(state="disabled")
-            self.status_label.configure(text="Pronto.")
+            self.status_label.configure(text="Ready.")
         self.file_textbox.configure(state="disabled")
 
     def add_files(self, files):
