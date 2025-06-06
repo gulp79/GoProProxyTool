@@ -104,4 +104,6 @@ If you want to build the application yourself, follow these steps.
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+
+![Downloads](https://img.shields.io/github/downloads/gulp79/GoProProxyTool/total?style=for-the-badge&labelColor=21262d&color=238636)
 ---
