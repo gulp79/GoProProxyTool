@@ -171,18 +171,18 @@ class AppWindow(ctk.CTkToplevel):
                     # Sposta e rinomina il file
                     shutil.move(file_path, destination_path)
                     
-                    self.status_label.configure(text=f"Processato: {filename} -> {new_filename}")
+                    self.status_label.configure(text=f"Processed: {filename} -> {new_filename}")
                     self.update() # Forza l'aggiornamento della UI
                     processed_count += 1
                 else:
                     error_count += 1
             except Exception as e:
                 error_count += 1
-                print(f"Errore nel processare {file_path}: {e}")
+                print(f"Error processing {file_path}: {e}")
 
         # Messaggio finale
-        result_message = f"Elaborazione completata!\n\nFile processati con successo: {processed_count}\nFile ignorati o con errori: {error_count}"
-        messagebox.showinfo("Successo", result_message)
+        result_message = f"Processing complete!\n\nFiles processed successfully: {processed_count}\nFiles ignored or with errors: {error_count}"
+        messagebox.showinfo("Success", result_message)
 
         # Ripristina l'interfaccia
         self.clear_list()
