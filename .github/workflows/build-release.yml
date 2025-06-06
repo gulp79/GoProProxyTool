@@ -33,7 +33,7 @@ jobs:
       # 4. Compila l'applicazione con PyInstaller
       - name: Build executable with PyInstaller
         run: |
-          pyinstaller --name="GoProProxyTool" --noconsole --onefile --icon="assets/icon.ico" main.py
+          pyinstaller --name="GoProProxyTool" --noconsole --onefile --icon="assets/icon.ico" --collect-all customtkinter --collect-all tkinterdnd2 main.py
       
       # 5. Prepara l'artefatto per la release (lo zippa)
       - name: Package release artifact
