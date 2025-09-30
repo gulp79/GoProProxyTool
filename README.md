@@ -83,7 +83,18 @@ If you want to build the application yourself, follow these steps.
     ```
 
 5.  **Build the executable:**
-    To create a standalone `.exe` file, use PyInstaller.
+    To create a standalone `.exe` file, using Nuitka.
+    ```bash
+    # Install PyInstaller if you haven't already
+    pip install nuitka ordered-set
+
+    # Run the build command
+    pyinstaller --name="GoProProxyTool" --noconsole --onefile --icon="assets/icon.ico" --collect-all customtkinter --collect-all tkinterdnd2 main.py
+    nuitka --standalone --onefile --windows-console-mode=disable --enable-plugin=tk-inter --windows-icon-from-ico="assets/icon.ico" --output-filename=GoProProxyTool.exe main.py
+    ```
+    The final executable will be located in the `dist` folder.
+
+    To create a standalone `.exe` file, using PyInstaller.
     ```bash
     # Install PyInstaller if you haven't already
     pip install pyinstaller
