@@ -1,5 +1,7 @@
 # GoPro Proxy Tool for DaVinci Resolve
 
+☕ **Enjoying my work?** &nbsp; <a href="https://ko-fi.com/gulp79"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi" height="32" style="vertical-align: middle;" /></a>
+
 <img width="517" alt="1" src="https://github.com/user-attachments/assets/63958711-bc62-419d-ab6c-75159042a8e0" />
 
 A simple, modern, and efficient desktop application designed to streamline the proxy workflow for GoPro users editing in DaVinci Resolve. This tool automates the tedious process of converting GoPro's low-resolution `.LRV` files into usable proxies that DaVinci Resolve can link to your high-resolution source footage.
